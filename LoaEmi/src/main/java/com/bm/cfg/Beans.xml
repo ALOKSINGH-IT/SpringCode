@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="c" class="com.bm.beans.Cache"/>
+
+
+<bean id="cm" class="com.bm.beans.CacheManager">
+<constructor-arg name="cache" ref="c"/>
+</bean>
+
+<bean id="emi" class="com.bm.beans.EmiCal">
+
+<property name="cache" ref="c"/>
+</bean>
+
+
+</beans>
